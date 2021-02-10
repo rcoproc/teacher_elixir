@@ -1,4 +1,4 @@
-<h1>Listing Posts with conflict</h1>
+<h2>Listing Posts with conflict</h2>
 
 <table>
   <thead>
@@ -12,7 +12,7 @@
   <tbody>
 <%= for post <- @posts do %>
     <tr>
-      <td><%= post.title %></td>
+      <p><%= post.title %></p>
       <td><%= post.body %></td>
 
       <td>
