@@ -11,7 +11,22 @@ jobs:
 
     name: Build and test
     runs-on: ubuntu-latest
-
+    env:
+      APP_VERSION: test
+      MIX_ENV: test
+      DB_LOCAL_USERNAME: teacher_test
+    services:
+      db:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        port: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
     - uses: actions/checkout@v2
     - name: Set up Elixir
