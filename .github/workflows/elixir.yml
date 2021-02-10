@@ -43,4 +43,7 @@ jobs:
     - name: Install dependencies
       run: mix deps.get
     - name: Run tests
-      run: mix test
+      run: |
+        mix ecto.migrate
+        mix test
+        mix format --check-formatted
