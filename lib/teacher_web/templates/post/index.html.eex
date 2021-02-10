@@ -1,4 +1,6 @@
-<h2>Listing Posts with conflicts </h2>
+<h2>Listing Posts with conflicts 
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</h2>
 
 <table>
   <thead>
@@ -12,7 +14,7 @@
   <tbody>
 <%= for post <- @posts do %>
     <tr>
-      <td><%= post.title %></td>
+      <h3><%= post.title %></h3>
       <td><%= post.body %></td>
 
       <td>
