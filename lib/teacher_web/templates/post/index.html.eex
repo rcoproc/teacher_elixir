@@ -15,7 +15,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 <%= for post <- @posts do %>
     <tr>
       <h3><%= post.title %></h3>
-      <td><%= post.body %></td>
+      <h3><%= post.body %></h3>
 
       <td>
         <span><%= link "Show", to: Routes.post_path(@conn, :show, post) %></span>
